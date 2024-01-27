@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Linux C 编程一站式学习</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="//npm.elemecdn.com/docsify/lib/themes/buble.css"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      window.$docsify = {
+        name: "Linux C 编程一站式学习",
+        repo: "",
+        loadSidebar: true,
+        subMaxLevel: 6,
+        auto2top: true,
+        search: "auto",
+        copyCode: {
+          buttonText: "复制",
+        },
+        plugins: [
+          // https://docsify.js.org/#/write-a-plugin
+          (hook, vm) => {
+            hook.doneEach(() => {
+              mediumZoom(
+                document.querySelectorAll(
+                  ".markdown-section img:not(.emoji):not([data-no-zoom])",
+                ),
+              );
+            });
+          },
+        ],
+      };
+    </script>
+    <script src="//npm.elemecdn.com/docsify/lib/docsify.min.js"></script>
+    <script src="//npm.elemecdn.com/docsify/lib/plugins/search.js"></script>
+    <script src="//npm.elemecdn.com/docsify-copy-code"></script>
+    <script src="//npm.elemecdn.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="//npm.elemecdn.com/medium-zoom"></script>
+    <script src="//npm.elemecdn.com/prismjs/components/prism-bash.js"></script>
+    <script src="//npm.elemecdn.com/prismjs/components/prism-c.js"></script>
+    <script src="//npm.elemecdn.com/prismjs/components/prism-asm6502.js"></script>
+    <script src="//npm.elemecdn.com/prismjs/components/prism-makefile.js"></script>
+    <script src="//registry.npmmirror.com/docsify-sidebar-collapse/1.3.5/files/dist/docsify-sidebar-collapse.min.js"></script>
+  </body>
+</html>
